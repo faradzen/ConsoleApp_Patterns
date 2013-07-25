@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace _911_ConsoleApp_Observer
 {
@@ -58,7 +55,7 @@ namespace _911_ConsoleApp_Observer
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Observer");
             var n1 = new MailNotif();
