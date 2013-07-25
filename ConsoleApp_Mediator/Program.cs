@@ -6,54 +6,47 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_Mediator
 {
-
     class Unit
     {
-        public int Strength { get; set; }
         public string Name { get; set; }
-        public int Health { get; set; }
-        public Sword Sword { get; set; }
 
         public void Attack()
         {
-            Console.WriteLine("Unit.Attack!");
+            Console.WriteLine("Unit-{0}.Attack!", Name);
         }
-
-    }
-
-    class Sword
-    {
-        public int Damage { get; set; }
-        /// <summary>
-        /// from 100 to 0. 0 - broken
-        /// </summary>
-        public int Durability { get; set; }
+        public void Defend()
+        {
+            Console.WriteLine("Unit-{0}.Defend", Name);
+        }
     }
 
     /// <summary>
     /// mediator methods contain buisness logic operations for many components
     /// </summary>
-    class Mediator
+    class MediatorBetweenUnits
     {
         private Unit _attacker;
         private Unit _defender;
 
-        void Attack()
+        public void RegisterAttacker(Unit attacker)
         {
-            _attacker.Attack();
-            var attackerClearDamage = (_attacker.Strength / 100) * _attacker.Sword.Damage;
-            var brokenSwordPenalty = _attacker.Sword.Durability * 100;
-            _defender.Health -= attackerClearDamage * brokenSwordPenalty;
-
-            //simplify:
-            var _defenderHealthDamage = 
-            //after each atack sword is crushed 
-            _attacker.Sword.Durability -= _attacker.Strength / 10;
+            _attacker = attacker;
+        }
+        public void RegisterDefender(Unit defender)
+        {
+            _defender = defender;
         }
 
-        void RepairSwords(int durabilityBinus)
+        public void AttackWithDefend()
         {
-            _sword.Durability += durabilityBinus;
+            _attacker.Attack();
+            _defender.Defend();
+        }
+
+        public void SurpriseAttack()
+        {
+            Console.WriteLine("Surprise!");
+            _attacker.Attack();
         }
     }
 
@@ -63,6 +56,15 @@ namespace ConsoleApp_Mediator
         static void Main(string[] args)
         {
             Console.WriteLine("ConsoleApp_Mediator");
+            var a = new Unit { Name = "Alice" };
+            var d = new Unit { Name = "Dan" };
+            var m = new MediatorBetweenUnits();
+            m.RegisterAttacker(a);
+            m.RegisterDefender(d);
+
+            m.AttackWithDefend();
+            m.SurpriseAttack();
+            m.SurpriseAttack();
 
             Console.ReadKey();
         }
