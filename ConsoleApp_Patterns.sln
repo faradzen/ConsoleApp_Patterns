@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_ConsoleApp_Iterator", "8_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_ConsoleApp_Mediator", "ConsoleApp_Mediator\9_ConsoleApp_Mediator.csproj", "{C9084749-41F4-42F8-B512-06130DFEDFFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "910_ConsoleApp_Memento", "910_ConsoleApp_Memento\910_ConsoleApp_Memento.csproj", "{B9516ADA-78B5-465F-A87A-D7C4CF29EE68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "911_ConsoleApp_Observer", "911_ConsoleApp_Observer\911_ConsoleApp_Observer.csproj", "{835FCD53-24FC-474B-A36C-56A1E0AA5039}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,14 @@ Global
 		{C9084749-41F4-42F8-B512-06130DFEDFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9084749-41F4-42F8-B512-06130DFEDFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9084749-41F4-42F8-B512-06130DFEDFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9516ADA-78B5-465F-A87A-D7C4CF29EE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9516ADA-78B5-465F-A87A-D7C4CF29EE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9516ADA-78B5-465F-A87A-D7C4CF29EE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9516ADA-78B5-465F-A87A-D7C4CF29EE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835FCD53-24FC-474B-A36C-56A1E0AA5039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835FCD53-24FC-474B-A36C-56A1E0AA5039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835FCD53-24FC-474B-A36C-56A1E0AA5039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835FCD53-24FC-474B-A36C-56A1E0AA5039}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
